@@ -48,7 +48,7 @@ export class CreateStudentDto {
     student.motherNo = dto.motherNo;
     student.email = dto.email;
     student.phoneNo = dto.phoneNo;
-    student.id = uuidv4();
+    // student.id = uuidv4();
     student.createdDate = new Date();
     student.updatedDate = new Date(0);
     return student;

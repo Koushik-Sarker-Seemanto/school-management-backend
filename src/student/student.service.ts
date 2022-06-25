@@ -21,7 +21,6 @@ export class StudentService {
     });
     await this.repository.insert(student);
     return await this.repository.findOne({ where: { id: student.id } });
-    // return 'This action adds a new student';
   }
 
   async findAll() {
@@ -43,7 +42,6 @@ export class StudentService {
     exStudent.updatedDate = new Date();
     await this.repository.update(id, updateStudentDto);
     return this.repository.findOne({ where: { id } });
-    return `This action updates a #${id} student`;
   }
 
   async remove(id: string) {
